@@ -10,7 +10,9 @@ let rec prod (lst:int list) =
 // Problem 2
 let rec map f (lst:int list) =
     // write your solution here
-    []
+    if List.isEmpty lst
+    then []
+    else f List.head lst :: map f (List.tail lst)
 
 // Problem 3
 let rec odd (lst:int list) =
